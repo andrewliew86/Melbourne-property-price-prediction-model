@@ -75,11 +75,13 @@ The API is Dockerized, allowing easy deployment in any environment. Simply make 
    docker run -p 5000:5000 flask-house-prices-app
    ```
 
+### Cloud deployment (optional)
+- Azure: Deploy your Docker container via Azure Container Apps or Azure Container Instances. Cloud deployment will help with scability and allow external users to use the model.
+
 ### API Usage
+Once the container is running , you can send a POST request to the `/predict` endpoint.
 
-Once the container is running, you can send a POST request to the `/predict` endpoint.
-
-**Example Request**:
+**Example Request (local Docker container)**:
 ```bash
 curl -X POST http://localhost:5000/predict \
     -H "Content-Type: application/json" \
